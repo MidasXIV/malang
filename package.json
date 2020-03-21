@@ -1,0 +1,42 @@
+{
+  "name": "malang",
+  "version": "1.0.0",
+  "description": "dividend portfolio tracker - analyser - stimulator",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint . --ext .ts",
+    "build": "rimraf ./build && tsc",
+    "start": "npm run build && node build/index.js",
+    "start:dev": "nodemon"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MidasXIV/malang.git"
+  },
+  "keywords": [
+    "dividends",
+    "portfolio",
+    "stimulator"
+  ],
+  "author": "Aman Shaikh (mxiv)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MidasXIV/malang/issues"
+  },
+  "homepage": "https://github.com/MidasXIV/malang#readme",
+  "devDependencies": {
+    "@types/express": "^4.17.3",
+    "@types/node": "^13.9.2",
+    "@typescript-eslint/eslint-plugin": "^2.24.0",
+    "@typescript-eslint/parser": "^2.24.0",
+    "eslint": "^6.8.0",
+    "nodemon": "^2.0.2",
+    "rimraf": "^3.0.2",
+    "ts-node": "^8.7.0",
+    "typescript": "^3.8.3"
+  },
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
