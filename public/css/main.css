@@ -1,0 +1,84 @@
+body,
+html {
+    height: 100%;
+}
+
+.d-gray {
+    background-color: #15191c;
+}
+
+.primary-gray {
+    background-color: #23262B;
+}
+
+.primary {
+    background-color: #455059;
+}
+
+.s-gray {
+    background-color: #888a7e;
+}
+
+.d-blue {
+    background-color: #4d5c94;
+}
+
+.b-gray {
+    background-color: #9ca0a4;
+}
+
+.fair {
+    background-color: #e6e7ea;
+}
+
+.orange {
+    background-color: #dfb780;
+}
+
+.blue {
+    background-color: #6775d2;
+}
+
+.green {
+    background-color: #36d644;
+}
+
+.icon-holder {
+    text-align: center;
+    cursor: pointer;
+    height: 3em;
+    font-size: 1.2em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.icon-holder:hover {
+    background-color: #4d5c94;
+}
+
+.icon {
+    color: #e6e7ea;
+}
+
+.main-pane {
+    color: #e6e7ea;
+    background-color: #23262B;
+}
+
+.secondary-pane {
+    color: #e6e7ea;
+    background-color: #455059;
+}
+
+.vertical-align {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.small-text {
+    color: #9ca0a4;
+}
