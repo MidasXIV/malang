@@ -54,7 +54,7 @@ html {
     flex-direction: column;
 }
 
-.icon-holder:hover {
+.icon-selected, .icon-holder:hover {
     background-color: #4d5c94;
 }
 
@@ -81,4 +81,58 @@ html {
 
 .small-text {
     color: #9ca0a4;
+}
+
+.form-control-plaintext2 {
+    color: #9ca0a4;
+}
+
+hr {
+    background-color: #7F888a7e;
+}
+
+.malang-form-input {
+    background-color: #2e3439 !important;
+    border: 0px !important;
+}
+
+.malang-form-input:focus {
+    color: #9ca0a4 !important;
+    border: 0px !important;
+    outline: 0 none !important;
+}
+
+.btn-gray {
+    color: #9ca0a4;
+    background-color: #75838e;
+    border-color: #7F888a7e;
+}
+
+.btn-gray:hover {
+    color: #9ca0a4;
+    background-color: #75838e;
+    border-color: #7F888a7e;
+}
+
+.malang-table {
+    color: #7F888a7e !important;
+    font-size: x-small;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.malang-table>tbody>tr {
+    color: #888a7e !important;
+    background-color: #2e3439 !important;
+
+    border-bottom: 0.5em #23262B solid;
+
+    -webkit-box-shadow: 0 10px 20px 0 rgba(0, 0, 0, .03);
+    -moz-box-shadow: 0 10px 20px 0 rgba(0, 0, 0, .03);
+    box-shadow: 0 10px 20px 0 rgba(0, 0, 0, .03);
+}
+
+.malang-table>tbody>tr:hover {
+    background-color: #455059 !important;
+    cursor: pointer;
 }
