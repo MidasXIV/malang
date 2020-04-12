@@ -17,10 +17,19 @@ router.get('/about', function (req, res) {
 });
 
 //dividends
-// router.get('/dividend/:ticker', dividends.getDividendInfo);
-// router.get('/dividendHistory/:ticker', dividends.getDividendHistory);
-//dividends
 router.get('/dividend/:ticker', dividendController.getDividendInfo);
-router.get('/dividendHistory/:ticker', dividendController.getDividendHistory);
+router.get('/dividendHistory/', dividendController.getDividendHistory);
+
+/**
+ * router.get('/dividendHistory/:ticker', dividendController.getDividendHistory);
+ * use : const ticker = request.params.ticker; in controller
+ * URL : http://localhost:5000/api/dividendHistory/AAPL
+ */
+
+ /**
+  * router.get('/dividendHistory/', dividendController.getDividendHistory);
+  * use : const ticker = request.query.ticker;
+  * URL : http://localhost:5000/api/dividendHistory/?ticker=AAPL
+  */
 
 export default router;

@@ -15,7 +15,7 @@ export class DividendController {
         ** Todo - do not hard code time intervals.
         */
         const yahooFinanceDividendHistoryURL = (ticker: string): string => `https://finance.yahoo.com/quote/${ticker}/history?period1=345427200&period2=1585353600&interval=div%7Csplit&filter=div&frequency=1d`;
-        const ticker = request.params.ticker;
+        const ticker = request.query.ticker;
         console.log('fetching Info');
         requestjs({
             method: 'GET',
