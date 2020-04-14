@@ -3,6 +3,10 @@ html {
     height: 100%;
 }
 
+.hidden {
+    display: none;
+}
+
 .d-gray {
     background-color: #15191c;
 }
@@ -52,9 +56,11 @@ html {
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    margin-bottom: 8px;
 }
 
-.icon-selected, .icon-holder:hover {
+.icon-selected,
+.icon-holder:hover {
     background-color: #4d5c94;
 }
 
@@ -70,6 +76,16 @@ html {
 .secondary-pane {
     color: #e6e7ea;
     background-color: #455059;
+}
+
+.register-carousel-pane {
+    color: #e6e7ea;
+    background-color: #15191c;
+}
+
+.register-pane {
+    color: #e6e7ea;
+    background-color: #23262B;
 }
 
 .vertical-align {
@@ -135,4 +151,14 @@ hr {
 .malang-table>tbody>tr:hover {
     background-color: #455059 !important;
     cursor: pointer;
+}
+
+.flex-container {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+}
+
+.space-between {
+    justify-content: space-between;
 }
