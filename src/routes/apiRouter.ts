@@ -17,8 +17,8 @@ router.get('/about', function (req, res) {
 });
 
 //dividends
-router.get('/dividend/:ticker', dividendController.getDividendInfo);
-router.get('/dividendHistory/', dividendController.getDividendHistory);
+router.get('/dividend/',  dividendController.getDividendInfo.bind(dividendController));
+router.get('/dividendHistory/', dividendController.getDividendHistory.bind(dividendController));
 
 /**
  * router.get('/dividendHistory/:ticker', dividendController.getDividendHistory);
@@ -32,4 +32,12 @@ router.get('/dividendHistory/', dividendController.getDividendHistory);
   * URL : http://localhost:5000/api/dividendHistory/?ticker=AAPL
   */
 
+  /**
+   * router.get('/dividend/:ticker', dividendController.getDividendInfo);
+   * has scope issues, so all methods inside the class cannot call eachother using 'this'
+   * https://stackoverflow.com/questions/40018472/implement-express-controller-class-with-typescript
+   * 
+   * solution 1
+   * router.get("/dividend/:ticker', dividendController.getDividendInfo.bind(dividendController));
+   */
 export default router;
