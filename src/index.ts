@@ -1,6 +1,6 @@
 import express from 'express';
-import { Request, Response } from 'express';
 import hbs from 'express-handlebars';
+import logger from './util/logger';
 
 const app = express();
 const PORT = process.env.PORT || 5000;
@@ -20,4 +20,4 @@ import viewsRouter from './routes/viewsRouter';
 
 app.use('/', viewsRouter);
 app.use('/api', apiRouter);
-app.listen(PORT, () => console.log(`Server started on port ${PORT}!`))
+app.listen(PORT, () => logger.debug(`Server started on port ${PORT}!`));

@@ -1,6 +1,7 @@
 import requestjs from 'request';
 import cheerio from 'cheerio';
 import { Request, Response } from 'express';
+import logger from '../util/logger';
 
 interface DividendInformationInterface {
     symbol: string;
@@ -254,7 +255,7 @@ export class DividendController {
 
         this.makeRequest(yahooFinancedividendProfileURL).then((html) => {
 
-            console.log(`fetched Dividend Information for ${ticker}`);
+            logger.debug(`fetched Dividend Information for ${ticker}`);
             const $ = cheerio.load(html);
 
             symbol = ticker;
@@ -268,7 +269,7 @@ export class DividendController {
 
         }).then((html) => {
 
-            console.log(`fetched Dividend History Information for ${ticker}`);
+            logger.debug(`fetched Dividend History Information for ${ticker}`);
             const $ = cheerio.load(html);
 
             const dividendCurrency = this.parseStockCurrency($);
@@ -287,7 +288,7 @@ export class DividendController {
         */
         const yahooFinanceDividendHistoryURL = (ticker: string): string => `https://finance.yahoo.com/quote/${ticker}/history?period1=345427200&period2=1585353600&interval=div%7Csplit&filter=div&frequency=1d`;
         const ticker = request.query.ticker;
-        console.log('fetching Info');
+        logger.debug('fetching Info');
         requestjs({
             method: 'GET',
             url: yahooFinanceDividendHistoryURL(ticker),
@@ -295,8 +296,8 @@ export class DividendController {
                 'User-Agent': 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/38.0.2125.111 Safari/537.36'
             }
         }, (err, res, html) => {
-            console.log('fetched Info');
-            if (err) return console.error(err);
+            logger.debug('fetched Info');
+            if (err) return logger.error(err);
 
             const $ = cheerio.load(html);
 
