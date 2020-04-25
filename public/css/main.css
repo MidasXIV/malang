@@ -81,11 +81,13 @@ html {
 .register-carousel-pane {
     color: #e6e7ea;
     background-color: #15191c;
+    background-color: #23262B;
 }
 
 .register-pane {
     color: #e6e7ea;
     background-color: #23262B;
+    background-color: #455059;
 }
 
 .vertical-align {
@@ -161,4 +163,63 @@ hr {
 
 .space-between {
     justify-content: space-between;
+}
+
+.symbol-ticker__symbol {
+    font-family: "nudista-web", Helvetica, Arial, sans-serif;
+    font-weight: 300;
+    font-size: 1rem;
+    line-height: 1;
+}
+
+.symbol-ticker__name {
+    font-family: "source_sans_prolight", Helvetica, Arial, sans-serif;
+    letter-spacing: .5px;
+    display: none;
+    font-size: 1.375rem;
+    line-height: 1.5;
+    color: gray;
+}
+
+.sub-navbar-column {
+    background-color: #282D32;
+    color: #888a7e;
+    text-transform: uppercase;
+}
+
+.sub-navbar-header {
+    padding: .75rem 1rem;
+    border-right: 4px solid #212529;
+}
+
+.malang-breadcrumb {
+    background-color: transparent !important;
+    font-size: small;
+    border-radius: 0;
+}
+
+/* Registration form input */
+.register-form-input{
+    background-color: transparent !important;
+    color: #9ca0a4;
+    border-radius: 0%;
+    font-weight: 400;
+    font-size: 2rem;
+}
+
+.register-form-input::placeholder {
+    /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: gray !important;
+    font-weight: 600;
+    /* Firefox */
+}
+
+.register-form-input:-ms-input-placeholder {
+    /* Internet Explorer 10-11 */
+    color: gray;
+}
+
+.register-form-input::-ms-input-placeholder {
+    /* Microsoft Edge */
+    color: gray;
 }
