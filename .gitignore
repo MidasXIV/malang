@@ -1,2 +1,11 @@
 node_modules/
+
+# Ignore built ts files
 build/
+
+# Ignore winston log files
+logs/
+*.log
+
+# API keys and secrets
+src/secrets/
