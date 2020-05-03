@@ -6,6 +6,7 @@ const app = express();
 const PORT = process.env.PORT || 5000;
 
 app.use(express.static('public'));
+app.use(express.urlencoded({ extended: true }));
 
 // view engine setup
 /** for somereason the engine name and the extension name should be same */
@@ -17,7 +18,9 @@ app.engine('hbs', hbs({
 
 import apiRouter from './routes/apiRouter';
 import viewsRouter from './routes/viewsRouter';
+import registrationRouter from './routes/registrationRouter'
 
 app.use('/', viewsRouter);
 app.use('/api', apiRouter);
+app.use('/registration', registrationRouter);
 app.listen(PORT, () => logger.debug(`Server started on port ${PORT}!`));
