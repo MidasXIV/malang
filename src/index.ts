@@ -20,7 +20,7 @@ import apiRouter from './routes/apiRouter';
 import viewsRouter from './routes/viewsRouter';
 import registrationRouter from './routes/registrationRouter'
 
-app.use('/', viewsRouter);
 app.use('/api', apiRouter);
 app.use('/registration', registrationRouter);
+app.use('/', viewsRouter);
 app.listen(PORT, () => logger.debug(`Server started on port ${PORT}!`));
