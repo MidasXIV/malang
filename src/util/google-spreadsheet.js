@@ -91,10 +91,7 @@ export class SpreadsheetDatabase {
    * 
    *****************************************************************************************/
 
-  async getAllData({
-    offset = 0,
-    limit
-  }) {
+  async getAllData({ offset = 0, limit }) {
     if (!this._isInitialized()) {
       await this.initialize().catch(logger.error);
     }
@@ -118,11 +115,23 @@ export class SpreadsheetDatabase {
 
     return await this.GoogleSheet
       .addRow(data)
-      .then((row, error) => {
-        if (error) {
-          throw(error);
-        }
+      .then((row) => {
         return this._iterateColumns(row);
+      })
+      .catch(logger.error);
+  }
+
+  async existsData({data, headers = this.headerValues}) {
+    const dbData = await this.getAllData({});
+    const filteredItems = dbData.filter((dbItem) => {
+      /** return true if you want to keep the item */
+      /** check if for every header the data from db and data passed match */
+      return headers.every((header) => {
+        return data[header] === dbItem[header];
       });
+    });
+    if (filteredItems.length > 0) {
+      return filteredItems[0];
+    }
   }
 }
