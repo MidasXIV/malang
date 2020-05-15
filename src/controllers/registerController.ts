@@ -2,11 +2,10 @@ import { Request, Response } from 'express';
 // import { SpreadsheetDatabase } from '../util/spreadsheet-database';
 import { SpreadsheetDatabase } from '../util/google-spreadsheet';
 import logger from '../util/logger';
-import { add } from 'winston';
 
 interface User {
-  name: string;
-  email: string;
+  Name: string;
+  Email: string;
 }
 
 export class RegisterController {
@@ -25,12 +24,17 @@ export class RegisterController {
    * 
    *****************************************************************************************/
 
-  private async _isUserRegistered(User: User): Promise<boolean> {
-    /**
-     * Get all data, check for same email ID
-     */
-    return true;
+  private async _isUserRegistered(User: User) {
+    const user = await this.GoogleDocument
+      .existsData({
+        data: User,
+        headers: ['Email']
+      });
+    if (user) {
+      return user;
+    }
   }
+
   /*****************************************************************************************
   *                                  Helper Methods
   *****************************************************************************************/
@@ -46,6 +50,11 @@ export class RegisterController {
     logger.warn(request.originalUrl);
     logger.info(`${userName} / ${userEmail} registered with ANAVRIN`);
     // response.render('login', { layout: 'main' });
+
+    /***************************************************************/
+    /**               STEP 3 : Add User to database.              **/
+    /***************************************************************/
+
     const addData = await this.GoogleDocument
       .addData({
         Name: userName,
@@ -57,7 +66,8 @@ export class RegisterController {
     if (addData) {
       response.json(addData);
     } else {
-      response.status(424).send({ status: 424, message: 'failed to add data', type: 'internal' });
+      response.status(424)
+        .send({ status: 424, message: 'failed to add data', type: 'internal' });
     }
 
     /**
@@ -79,6 +89,18 @@ export class RegisterController {
     /*********************************************************
     *                NOT YET IMPLEMENTED
     *********************************************************/
+    const { userName, userEmail } = request.query;
+    logger.info(`fetching information of ${userName} / ${userEmail}`);
+    const registeredUser = await this._isUserRegistered({
+      Name: userName,
+      Email: userEmail
+    });
+    if (registeredUser) {
+      response.json(registeredUser);
+    } else {
+      response.status(404)
+        .send({ status: 404, message: 'User not found' });
+    }
   }
 
   public async deleteUser(request: Request, response: Response) {
@@ -98,7 +120,8 @@ export class RegisterController {
     if (allData) {
       response.json(allData);
     } else {
-      response.status(424).send({ status: 424, message: 'failed to fetch all data', type: 'internal' });
+      response.status(424)
+        .send({ status: 424, message: 'failed to fetch all data', type: 'internal' });
     }
   }
 }
