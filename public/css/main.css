@@ -111,7 +111,7 @@ html {
   color: #e6e7ea;
   background-color: #23262B;
   background-color: #455059;
-  background-color: #282D32;
+  background-color: #282d32;
 }
 
 .vertical-align {
@@ -130,7 +130,7 @@ html {
 }
 
 hr {
-  background-color: #7F888a7e;
+  background-color: #7f888a7e;
 }
 
 .malang-form-input {
@@ -147,34 +147,34 @@ hr {
 .btn-gray {
   color: #9ca0a4;
   background-color: #75838e;
-  border-color: #7F888a7e;
+  border-color: #7f888a7e;
 }
 
 .btn-gray:hover {
   color: #9ca0a4;
   background-color: #75838e;
-  border-color: #7F888a7e;
+  border-color: #7f888a7e;
 }
 
 .malang-table {
-  color: #7F888a7e !important;
+  color: #7f888a7e !important;
   font-size: x-small;
   text-transform: uppercase;
   font-weight: bold;
 }
 
-.malang-table>tbody>tr {
+.malang-table >tbody >tr {
   color: #888a7e !important;
   background-color: #2e3439 !important;
 
-  border-bottom: 0.5em #23262B solid;
+  border-bottom: 0.5em #23262b solid;
 
-  -webkit-box-shadow: 0 10px 20px 0 rgba(0, 0, 0, .03);
-  -moz-box-shadow: 0 10px 20px 0 rgba(0, 0, 0, .03);
-  box-shadow: 0 10px 20px 0 rgba(0, 0, 0, .03);
+  -webkit-box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.03);
+  -moz-box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.03);
+  box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.03);
 }
 
-.malang-table>tbody>tr:hover {
+.malang-table >tbody >tr:hover {
   background-color: #455059 !important;
   cursor: pointer;
 }
@@ -198,7 +198,7 @@ hr {
 
 .symbol-ticker__name {
   font-family: "source_sans_prolight", Helvetica, Arial, sans-serif;
-  letter-spacing: .5px;
+  letter-spacing: 0.5px;
   display: none;
   font-size: 1.375rem;
   line-height: 1.5;
@@ -206,13 +206,13 @@ hr {
 }
 
 .sub-navbar-column {
-  background-color: #282D32;
+  background-color: #282d32;
   color: #888a7e;
   text-transform: uppercase;
 }
 
 .sub-navbar-header {
-  padding: .75rem 1rem;
+  padding: 0.75rem 1rem;
   border-right: 4px solid #212529;
 }
 
@@ -228,7 +228,6 @@ hr {
   color: #9ca0a4 !important;
   border-radius: 0% !important;
   font-weight: 400 !important;
-  /* color: #FFFC; */
   padding-left: 0 !important;
   font-size: x-large !important;
 }
