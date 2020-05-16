@@ -1,3 +1,21 @@
+@font-face {
+    font-family: "Blender Pro";
+    src: url("//db.onlinewebfonts.com/t/a082fd3df68a0b54e0d4d794bc38d268.eot");
+    src: url("//db.onlinewebfonts.com/t/a082fd3df68a0b54e0d4d794bc38d268.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/a082fd3df68a0b54e0d4d794bc38d268.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/a082fd3df68a0b54e0d4d794bc38d268.woff") format("woff"), url("//db.onlinewebfonts.com/t/a082fd3df68a0b54e0d4d794bc38d268.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/a082fd3df68a0b54e0d4d794bc38d268.svg#Blender Pro") format("svg");
+}
+
+@font-face {
+    font-family: "Blender Pro Thin";
+    src: url("//db.onlinewebfonts.com/t/31b8101b7be4ea7380dd68f7ae18231d.eot");
+    src: url("//db.onlinewebfonts.com/t/31b8101b7be4ea7380dd68f7ae18231d.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/31b8101b7be4ea7380dd68f7ae18231d.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/31b8101b7be4ea7380dd68f7ae18231d.woff") format("woff"), url("//db.onlinewebfonts.com/t/31b8101b7be4ea7380dd68f7ae18231d.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/31b8101b7be4ea7380dd68f7ae18231d.svg#Blender Pro") format("svg");
+}
+
+@font-face {
+    font-family: "JetBrains";
+    src: url("/fonts/JetBrainsMono-1.0.3/web/eot/JetBrainsMono-Regular.eot");
+    src: url("/fonts/JetBrainsMono-1.0.3/web/woff/JetBrainsMono-Regular.woff") format("woff"), url("/fonts/JetBrainsMono-1.0.3/ttf/JetBrainsMono-Regular.ttf") format("truetype");
+}
+
 body,
 html {
     height: 100%;
@@ -84,10 +102,16 @@ html {
     background-color: #23262B;
 }
 
+.info-pane {
+    color: #e6e7ea;
+    background-color: #15191c;
+}
+
 .register-pane {
     color: #e6e7ea;
     background-color: #23262B;
     background-color: #455059;
+    background-color: #282D32;
 }
 
 .vertical-align {
@@ -199,12 +223,18 @@ hr {
 }
 
 /* Registration form input */
-.register-form-input{
+.register-form-input {
     background-color: transparent !important;
-    color: #9ca0a4;
-    border-radius: 0%;
-    font-weight: 400;
-    font-size: 2rem;
+    color: #9ca0a4 !important;
+    border-radius: 0% !important;
+    font-weight: 400 !important;
+    /* color: #FFFC; */
+    padding-left: 0 !important;
+    font-size: x-large !important;
+}
+
+.register-form-input:focus {
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(0, 0, 0, 0) !important;
 }
 
 .register-form-input::placeholder {
@@ -222,4 +252,64 @@ hr {
 .register-form-input::-ms-input-placeholder {
     /* Microsoft Edge */
     color: gray;
+}
+
+/* .register-form-group {
+    border-left: 7px double;
+    padding-left: 1rem;
+} */
+
+.malang-form-small {
+    font-size: x-small;
+    font-weight: 400;
+}
+
+.error-page-content {
+    color: #fff;
+    font-family: Blender Pro, JetBrainsMono, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Open Sans, Helvetica Neue, sans-serif;
+    font-feature-settings: "zero";
+    font-variant-numeric: slashed-zero;
+    display: flex;
+}
+
+svg.warning-icon {
+    width: 48px;
+    height: 48px;
+    margin-right: 36px;
+}
+
+h1.error-title {
+    font-variant-numeric: slashed-zero;
+    font-size: 64px;
+    line-height: 52px;
+    -webkit-align-items: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+h2.error-description {
+    font-family: Blender Pro Thin, JetBrainsMono, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Open Sans, Helvetica Neue, sans-serif;
+    font-size: 32px;
+    color: rgba(255, 255, 255, 0.6);
+    font-weight: thin;
+}
+
+.blender-font {
+    font-family: Blender Pro, JetBrainsMono, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Open Sans, Helvetica Neue, sans-serif;
+}
+
+.blender-light-font {
+    font-family: Blender Pro Thin, JetBrainsMono, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Open Sans, Helvetica Neue, sans-serif;
+}
+
+.jetBrains-font {
+    font-family: JetBrains, Blender Pro Thin, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Open Sans, Helvetica Neue, sans-serif;
+}
+
+.register-panel {
+    background-color: #455059;
+	overflow-y:auto;
+	position:fixed;
 }
