@@ -1,257 +1,256 @@
 @font-face {
-    font-family: "Blender Pro";
-    src: url("//db.onlinewebfonts.com/t/a082fd3df68a0b54e0d4d794bc38d268.eot");
-    src: url("//db.onlinewebfonts.com/t/a082fd3df68a0b54e0d4d794bc38d268.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/a082fd3df68a0b54e0d4d794bc38d268.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/a082fd3df68a0b54e0d4d794bc38d268.woff") format("woff"), url("//db.onlinewebfonts.com/t/a082fd3df68a0b54e0d4d794bc38d268.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/a082fd3df68a0b54e0d4d794bc38d268.svg#Blender Pro") format("svg");
+  font-family: "Blender Pro";
+  src: url("//db.onlinewebfonts.com/t/a082fd3df68a0b54e0d4d794bc38d268.eot");
+  src: url("//db.onlinewebfonts.com/t/a082fd3df68a0b54e0d4d794bc38d268.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/a082fd3df68a0b54e0d4d794bc38d268.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/a082fd3df68a0b54e0d4d794bc38d268.woff") format("woff"), url("//db.onlinewebfonts.com/t/a082fd3df68a0b54e0d4d794bc38d268.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/a082fd3df68a0b54e0d4d794bc38d268.svg#Blender Pro") format("svg");
 }
 
 @font-face {
-    font-family: "Blender Pro Thin";
-    src: url("//db.onlinewebfonts.com/t/31b8101b7be4ea7380dd68f7ae18231d.eot");
-    src: url("//db.onlinewebfonts.com/t/31b8101b7be4ea7380dd68f7ae18231d.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/31b8101b7be4ea7380dd68f7ae18231d.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/31b8101b7be4ea7380dd68f7ae18231d.woff") format("woff"), url("//db.onlinewebfonts.com/t/31b8101b7be4ea7380dd68f7ae18231d.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/31b8101b7be4ea7380dd68f7ae18231d.svg#Blender Pro") format("svg");
+  font-family: "Blender Pro Thin";
+  src: url("//db.onlinewebfonts.com/t/31b8101b7be4ea7380dd68f7ae18231d.eot");
+  src: url("//db.onlinewebfonts.com/t/31b8101b7be4ea7380dd68f7ae18231d.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/31b8101b7be4ea7380dd68f7ae18231d.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/31b8101b7be4ea7380dd68f7ae18231d.woff") format("woff"), url("//db.onlinewebfonts.com/t/31b8101b7be4ea7380dd68f7ae18231d.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/31b8101b7be4ea7380dd68f7ae18231d.svg#Blender Pro") format("svg");
 }
 
 @font-face {
-    font-family: "JetBrains";
-    src: url("/fonts/JetBrainsMono-1.0.3/web/eot/JetBrainsMono-Regular.eot");
-    src: url("/fonts/JetBrainsMono-1.0.3/web/woff/JetBrainsMono-Regular.woff") format("woff"), url("/fonts/JetBrainsMono-1.0.3/ttf/JetBrainsMono-Regular.ttf") format("truetype");
+  font-family: "JetBrains";
+  src: url("/fonts/JetBrainsMono-1.0.3/web/eot/JetBrainsMono-Regular.eot");
+  src: url("/fonts/JetBrainsMono-1.0.3/web/woff/JetBrainsMono-Regular.woff") format("woff"), url("/fonts/JetBrainsMono-1.0.3/ttf/JetBrainsMono-Regular.ttf") format("truetype");
 }
 
 body,
 html {
-    height: 100%;
+  height: 100%;
 }
 
 .hidden {
-    display: none;
+  display: none;
 }
 
 .d-gray {
-    background-color: #15191c;
+  background-color: #15191c;
 }
 
 .primary-gray {
-    background-color: #23262B;
+  background-color: #23262B;
 }
 
 .primary {
-    background-color: #455059;
+  background-color: #455059;
 }
 
 .s-gray {
-    background-color: #888a7e;
+  background-color: #888a7e;
 }
 
 .d-blue {
-    background-color: #4d5c94;
+  background-color: #4d5c94;
 }
 
 .b-gray {
-    background-color: #9ca0a4;
+  background-color: #9ca0a4;
 }
 
 .fair {
-    background-color: #e6e7ea;
+  background-color: #e6e7ea;
 }
 
 .orange {
-    background-color: #dfb780;
+  background-color: #dfb780;
 }
 
 .blue {
-    background-color: #6775d2;
+  background-color: #6775d2;
 }
 
 .green {
-    background-color: #36d644;
+  background-color: #36d644;
 }
 
 .icon-holder {
-    text-align: center;
-    cursor: pointer;
-    height: 3em;
-    font-size: 1.2em;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    margin-bottom: 8px;
+  text-align: center;
+  cursor: pointer;
+  height: 3em;
+  font-size: 1.2em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-bottom: 8px;
 }
 
 .icon-selected,
 .icon-holder:hover {
-    background-color: #4d5c94;
+  background-color: #4d5c94;
 }
 
 .icon {
-    color: #e6e7ea;
+  color: #e6e7ea;
 }
 
 .main-pane {
-    color: #e6e7ea;
-    background-color: #23262B;
+  color: #e6e7ea;
+  background-color: #23262B;
 }
 
 .secondary-pane {
-    color: #e6e7ea;
-    background-color: #455059;
+  color: #e6e7ea;
+  background-color: #455059;
 }
 
 .register-carousel-pane {
-    color: #e6e7ea;
-    background-color: #15191c;
-    background-color: #23262B;
+  color: #e6e7ea;
+  background-color: #15191c;
+  background-color: #23262B;
 }
 
 .info-pane {
-    color: #e6e7ea;
-    background-color: #15191c;
+  color: #e6e7ea;
+  background-color: #15191c;
 }
 
 .register-pane {
-    color: #e6e7ea;
-    background-color: #23262B;
-    background-color: #455059;
-    background-color: #282D32;
+  color: #e6e7ea;
+  background-color: #23262B;
+  background-color: #455059;
+  background-color: #282d32;
 }
 
 .vertical-align {
-    display: flex !important;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
 
 .small-text {
-    color: #9ca0a4;
+  color: #9ca0a4;
 }
 
 .form-control-plaintext2 {
-    color: #9ca0a4;
+  color: #9ca0a4;
 }
 
 hr {
-    background-color: #7F888a7e;
+  background-color: #7f888a7e;
 }
 
 .malang-form-input {
-    background-color: #2e3439 !important;
-    border: 0px !important;
+  background-color: #2e3439 !important;
+  border: 0px !important;
 }
 
 .malang-form-input:focus {
-    color: #9ca0a4 !important;
-    border: 0px !important;
-    outline: 0 none !important;
+  color: #9ca0a4 !important;
+  border: 0px !important;
+  outline: 0 none !important;
 }
 
 .btn-gray {
-    color: #9ca0a4;
-    background-color: #75838e;
-    border-color: #7F888a7e;
+  color: #9ca0a4;
+  background-color: #75838e;
+  border-color: #7f888a7e;
 }
 
 .btn-gray:hover {
-    color: #9ca0a4;
-    background-color: #75838e;
-    border-color: #7F888a7e;
+  color: #9ca0a4;
+  background-color: #75838e;
+  border-color: #7f888a7e;
 }
 
 .malang-table {
-    color: #7F888a7e !important;
-    font-size: x-small;
-    text-transform: uppercase;
-    font-weight: bold;
+  color: #7f888a7e !important;
+  font-size: x-small;
+  text-transform: uppercase;
+  font-weight: bold;
 }
 
-.malang-table>tbody>tr {
-    color: #888a7e !important;
-    background-color: #2e3439 !important;
+.malang-table >tbody >tr {
+  color: #888a7e !important;
+  background-color: #2e3439 !important;
 
-    border-bottom: 0.5em #23262B solid;
+  border-bottom: 0.5em #23262b solid;
 
-    -webkit-box-shadow: 0 10px 20px 0 rgba(0, 0, 0, .03);
-    -moz-box-shadow: 0 10px 20px 0 rgba(0, 0, 0, .03);
-    box-shadow: 0 10px 20px 0 rgba(0, 0, 0, .03);
+  -webkit-box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.03);
+  -moz-box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.03);
+  box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.03);
 }
 
-.malang-table>tbody>tr:hover {
-    background-color: #455059 !important;
-    cursor: pointer;
+.malang-table >tbody >tr:hover {
+  background-color: #455059 !important;
+  cursor: pointer;
 }
 
 .flex-container {
-    list-style: none;
-    display: flex;
-    flex-direction: column;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
 }
 
 .space-between {
-    justify-content: space-between;
+  justify-content: space-between;
 }
 
 .symbol-ticker__symbol {
-    font-family: "nudista-web", Helvetica, Arial, sans-serif;
-    font-weight: 300;
-    font-size: 1rem;
-    line-height: 1;
+  font-family: "nudista-web", Helvetica, Arial, sans-serif;
+  font-weight: 300;
+  font-size: 1rem;
+  line-height: 1;
 }
 
 .symbol-ticker__name {
-    font-family: "source_sans_prolight", Helvetica, Arial, sans-serif;
-    letter-spacing: .5px;
-    display: none;
-    font-size: 1.375rem;
-    line-height: 1.5;
-    color: gray;
+  font-family: "source_sans_prolight", Helvetica, Arial, sans-serif;
+  letter-spacing: 0.5px;
+  display: none;
+  font-size: 1.375rem;
+  line-height: 1.5;
+  color: gray;
 }
 
 .sub-navbar-column {
-    background-color: #282D32;
-    color: #888a7e;
-    text-transform: uppercase;
+  background-color: #282d32;
+  color: #888a7e;
+  text-transform: uppercase;
 }
 
 .sub-navbar-header {
-    padding: .75rem 1rem;
-    border-right: 4px solid #212529;
+  padding: 0.75rem 1rem;
+  border-right: 4px solid #212529;
 }
 
 .malang-breadcrumb {
-    background-color: transparent !important;
-    font-size: small;
-    border-radius: 0;
+  background-color: transparent !important;
+  font-size: small;
+  border-radius: 0;
 }
 
 /* Registration form input */
 .register-form-input {
-    background-color: transparent !important;
-    color: #9ca0a4 !important;
-    border-radius: 0% !important;
-    font-weight: 400 !important;
-    /* color: #FFFC; */
-    padding-left: 0 !important;
-    font-size: x-large !important;
+  background-color: transparent !important;
+  color: #9ca0a4 !important;
+  border-radius: 0% !important;
+  font-weight: 400 !important;
+  padding-left: 0 !important;
+  font-size: x-large !important;
 }
 
 .register-form-input:focus {
-    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(0, 0, 0, 0) !important;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(0, 0, 0, 0) !important;
 }
 
 .register-form-input::placeholder {
-    /* Chrome, Firefox, Opera, Safari 10.1+ */
-    color: gray !important;
-    font-weight: 600;
-    /* Firefox */
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: gray !important;
+  font-weight: 600;
+  /* Firefox */
 }
 
 .register-form-input:-ms-input-placeholder {
-    /* Internet Explorer 10-11 */
-    color: gray;
+  /* Internet Explorer 10-11 */
+  color: gray;
 }
 
 .register-form-input::-ms-input-placeholder {
-    /* Microsoft Edge */
-    color: gray;
+  /* Microsoft Edge */
+  color: gray;
 }
 
 /* .register-form-group {
@@ -260,56 +259,56 @@ hr {
 } */
 
 .malang-form-small {
-    font-size: x-small;
-    font-weight: 400;
+  font-size: x-small;
+  font-weight: 400;
 }
 
 .error-page-content {
-    color: #fff;
-    font-family: Blender Pro, JetBrainsMono, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Open Sans, Helvetica Neue, sans-serif;
-    font-feature-settings: "zero";
-    font-variant-numeric: slashed-zero;
-    display: flex;
+  color: #fff;
+  font-family: Blender Pro, JetBrainsMono, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Open Sans, Helvetica Neue, sans-serif;
+  font-feature-settings: "zero";
+  font-variant-numeric: slashed-zero;
+  display: flex;
 }
 
 svg.warning-icon {
-    width: 48px;
-    height: 48px;
-    margin-right: 36px;
+  width: 48px;
+  height: 48px;
+  margin-right: 36px;
 }
 
 h1.error-title {
-    font-variant-numeric: slashed-zero;
-    font-size: 64px;
-    line-height: 52px;
-    -webkit-align-items: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    margin-bottom: 8px;
+  font-variant-numeric: slashed-zero;
+  font-size: 64px;
+  line-height: 52px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-bottom: 8px;
 }
 
 h2.error-description {
-    font-family: Blender Pro Thin, JetBrainsMono, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Open Sans, Helvetica Neue, sans-serif;
-    font-size: 32px;
-    color: rgba(255, 255, 255, 0.6);
-    font-weight: thin;
+  font-family: Blender Pro Thin, JetBrainsMono, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Open Sans, Helvetica Neue, sans-serif;
+  font-size: 32px;
+  color: rgba(255, 255, 255, 0.6);
+  font-weight: thin;
 }
 
 .blender-font {
-    font-family: Blender Pro, JetBrainsMono, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Open Sans, Helvetica Neue, sans-serif;
+  font-family: Blender Pro, JetBrainsMono, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Open Sans, Helvetica Neue, sans-serif;
 }
 
 .blender-light-font {
-    font-family: Blender Pro Thin, JetBrainsMono, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Open Sans, Helvetica Neue, sans-serif;
+  font-family: Blender Pro Thin, JetBrainsMono, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Open Sans, Helvetica Neue, sans-serif;
 }
 
 .jetBrains-font {
-    font-family: JetBrains, Blender Pro Thin, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Open Sans, Helvetica Neue, sans-serif;
+  font-family: JetBrains, Blender Pro Thin, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Open Sans, Helvetica Neue, sans-serif;
 }
 
 .register-panel {
-    background-color: #455059;
-	overflow-y:auto;
-	position:fixed;
+  background-color: #455059;
+  overflow-y: auto;
+  position: fixed;
 }
