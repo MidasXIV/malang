@@ -6,6 +6,7 @@ import logger from '../util/logger';
 interface User {
   Name: string;
   Email: string;
+  Date?: string;
 }
 
 export class RegisterController {
@@ -24,7 +25,7 @@ export class RegisterController {
    * 
    *****************************************************************************************/
 
-  private async _isUserRegistered(User: User) {
+  private async _isUserRegistered(User: User): Promise<User | undefined> {
     const user = await this.GoogleDocument
       .existsData({
         data: User,
@@ -45,7 +46,7 @@ export class RegisterController {
   * 
   *****************************************************************************************/
 
-  public async registerUser(request: Request, response: Response) {
+  public async registerUser(request: Request, response: Response): Promise<void> {
     const { userName, userEmail } = request.body;
     logger.warn(request.originalUrl);
     logger.info(`${userName} / ${userEmail} registered with ANAVRIN`);
@@ -64,7 +65,8 @@ export class RegisterController {
       .catch((err) => logger.error(`Error in adding Data ${err}`));
 
     if (addData) {
-      response.json(addData);
+      response.status(201)
+        .json(addData);
     } else {
       response.status(424)
         .send({ status: 424, message: 'failed to add data', type: 'internal' });
@@ -77,14 +79,16 @@ export class RegisterController {
      */
   }
 
-  public async updateUser(request: Request, response: Response) {
+  public async updateUser(request: Request, response: Response): Promise<void> {
 
     /*********************************************************
      *                NOT YET IMPLEMENTED
      *********************************************************/
+    response.status(501)
+      .send({ status: 501, message: 'Not Implemented', type: 'internal' });
   }
 
-  public async getUser(request: Request, response: Response) {
+  public async getUser(request: Request, response: Response): Promise<void> {
 
     /*********************************************************
     *                NOT YET IMPLEMENTED
@@ -103,14 +107,16 @@ export class RegisterController {
     }
   }
 
-  public async deleteUser(request: Request, response: Response) {
+  public async deleteUser(request: Request, response: Response): Promise<void> {
 
     /*********************************************************
      *                NOT YET IMPLEMENTED
      *********************************************************/
+    response.status(501)
+      .send({ status: 501, message: 'Not Implemented', type: 'internal' });
   }
 
-  public async getAllUsers(request: Request, response: Response) {
+  public async getAllUsers(request: Request, response: Response): Promise<void> {
 
     const { limit, offset } = request.body;
     const allData = await this.GoogleDocument
