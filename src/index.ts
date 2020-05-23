@@ -1,12 +1,14 @@
 import express from 'express';
 import hbs from 'express-handlebars';
 import logger from './util/logger';
+import morgan from 'morgan';
 
 const app = express();
 const PORT = process.env.PORT || 5000;
 
 app.use(express.static('public'));
 app.use(express.urlencoded({ extended: true }));
+app.use(morgan('dev'));
 
 // view engine setup
 /** for somereason the engine name and the extension name should be same */
@@ -18,7 +20,7 @@ app.engine('hbs', hbs({
 
 import apiRouter from './routes/apiRouter';
 import viewsRouter from './routes/viewsRouter';
-import registrationRouter from './routes/registrationRouter'
+import registrationRouter from './routes/registrationRouter';
 
 app.use('/api', apiRouter);
 app.use('/user', registrationRouter);
