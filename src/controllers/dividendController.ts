@@ -5,6 +5,30 @@ import logger from '../util/logger';
 
 interface DividendInformationInterface {
     symbol: string;
+    exchange: string;
+    name: string;
+    currency: string;
+    latestPrice: number;
+    industry: string;
+    sector: string;
+
+    paymentDate: string;
+    exDividendDate: string;
+
+    recordDate: number;
+    declaredDate: number;
+    
+    dividendAmount: number;
+    dividendYeild: string;
+    dividendPayoutRatio: number;
+    frequency: string;
+
+    peRatio: number;
+    EPS: number;
+}
+
+interface DividendInformationInterface {
+    symbol: string;
     name: string;
     price: number;
     exchange: string;
@@ -232,24 +256,6 @@ export class DividendController {
     public getDividendInfo(request: Request, response: Response): void {
         const ticker = request.query.ticker;
         const yahooFinancedividendProfileURL = this.getYahooFinancedividendProfileURL(ticker);
-        const dividendInformation = {
-            "symbol": "AAPL",
-            "exchange": "NASDAQ",
-            "name": "Apple Inc.",
-            "currency": "USD",
-            "latestPrice": 282.8,
-            "industry": "Telecommunications Equipment",
-            "sector": "Electronic Technology",
-            "exDate": "2019-04-26",
-            "paymentDate": "2019-05-06",
-            "recordDate": "2019-05-08",
-            "declaredDate": "2019-04-23",
-            "dividendAmount": "0.81",
-            "frequency": "rureytqal",
-            dividendYeild: 33434,
-            "peRatio": '',
-            "EPS": '',
-        };
 
         let symbol: string, name: string, price: number, exchange: string, stockSummary: StockSummaryInterface;
 
@@ -301,7 +307,7 @@ export class DividendController {
 
             const $ = cheerio.load(html);
 
-            const dividendInformation: any = [];
+            const dividendInformation: Array<DividendInformationItemInterface> = [];
             const dividendCurrency: string = $('div.Mt\\(20px\\) > span:nth-child(1) > span:nth-child(1)').text();
 
             $('table tbody').children("tr").each(function (index, row) {
