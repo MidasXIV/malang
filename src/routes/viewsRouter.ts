@@ -23,6 +23,11 @@ router.get('/overview', function (request: Request, response: Response) {
     response.render('overview', { layout: 'main' });
 });
 
+/** apex chart testing page */
+router.get('/chart', function (request: Request, response: Response) {
+    response.render('apex-chart', { layout: 'chart-wrapper' });
+});
+
 /** Invalid page routes */
 router.get('/*', function (request: Request, response: Response) {
     logger.warn(`Invalid page <=> ${request.ip} tried to reach ${request.originalUrl}`);
