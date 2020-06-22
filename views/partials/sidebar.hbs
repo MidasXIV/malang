@@ -1,7 +1,7 @@
 <nav class="col-md-1 d-gray d-none d-md-block sidebar col-lg-1  p-3">
     <div class="sidebar-sticky flex-container space-between h-100">
         <ul class="nav flex-column">
-            <li class="nav-item icon-holder p-1">
+            <li class="nav-item icon-holder {{#if active.overview}}icon-selected{{/if}} p-1">
                 <a href="/overview"><svg class="bi bi-view-list icon" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor"
                     xmlns="http://www.w3.org/2000/svg">
                     <path fill-rule="evenodd"
@@ -11,7 +11,7 @@
             </li>
         </ul>
         <ul class="nav flex-column">
-            <li class="nav-item icon-holder icon-selected p-1">
+            <li class="nav-item icon-holder {{#if active.home}}icon-selected{{/if}} p-1">
                 <a href="/"><svg class="bi bi-house icon" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor"
                     xmlns="http://www.w3.org/2000/svg">
                     <path fill-rule="evenodd"
@@ -22,7 +22,7 @@
                         clip-rule="evenodd" />
                 </svg></a>
             </li>
-            <li class="nav-item icon-holder p-1">
+            <li class="nav-item icon-holder {{#if active.portfolio}}icon-selected{{/if}} p-1">
                 <a href="/portfolio"><svg class="bi bi-bullseye icon" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor"
                     xmlns="http://www.w3.org/2000/svg">
                     <path fill-rule="evenodd" d="M8 15A7 7 0 108 1a7 7 0 000 14zm0 1A8 8 0 108 0a8 8 0 000 16z"
@@ -53,7 +53,7 @@
                         clip-rule="evenodd" />
                 </svg>
             </li> --}}
-            <li class="nav-item icon-holder p-1">
+            <li class="nav-item icon-holder {{#if active.register}}icon-selected{{/if}} p-1">
                 <a href="/register"><svg class="bi bi-file-earmark-text icon" width="1em" height="1em" viewBox="0 0 16 16"
                     fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                     <path
