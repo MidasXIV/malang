@@ -1,85 +1,85 @@
 <div class="col-md-7 ml-sm-auto col-lg-7 p-0">
-    <div class="main-pane h-100 p-4">
-        <h4 class="font-weight-light mb-1">Malang</h4>
-        <h6 class="font-weight-light small-text">Dividend portfolio tracker - stimulator</h6>
+  <div class="main-pane h-100 p-4">
+    <h4 class="font-weight-light mb-1">Malang</h4>
+    <h6 class="font-weight-light small-text">Dividend portfolio tracker - stimulator</h6>
 
-        <hr>
+    <hr>
 
-        <form action="api/dividendHistory/" method="GET">
-            <div class="form-row m-0">
-                <div class="col-11 p-0">
-                    <div class="form-group m-0">
-                        <label for="inputSymbol" class="sr-only">Symbol</label>
-                        <input type="text" class="form-control form-control-sm malang-form-input" id="inputSymbol" name="ticker"
-                            placeholder="Search for Symbol">
-                    </div>
-                </div>
-                <div class="col-1">
-                    <button type="submit" class="btn btn-gray btn-sm btn-block m-0">
-                        <svg class="bi bi-check icon" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <path fill-rule="evenodd"
-                                d="M13.854 3.646a.5.5 0 010 .708l-7 7a.5.5 0 01-.708 0l-3.5-3.5a.5.5 0 11.708-.708L6.5 10.293l6.646-6.647a.5.5 0 01.708 0z"
-                                clip-rule="evenodd" />
-                        </svg>
-                    </button>
-                </div>
-            </div>
-        </form>
+    <form action="api/dividendHistory/" method="GET">
+      <div class="form-row m-0">
+        <div class="col-11 p-0">
+          <div class="form-group m-0">
+            <label for="inputSymbol" class="sr-only">Symbol</label>
+            <input type="text" class="form-control form-control-sm malang-form-input" id="inputSymbol" name="ticker"
+              placeholder="Search for Symbol">
+          </div>
+        </div>
+        <div class="col-1">
+          <button type="submit" class="btn btn-gray btn-sm btn-block m-0">
+            <svg class="bi bi-check icon" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor"
+              xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd"
+                d="M13.854 3.646a.5.5 0 010 .708l-7 7a.5.5 0 01-.708 0l-3.5-3.5a.5.5 0 11.708-.708L6.5 10.293l6.646-6.647a.5.5 0 01.708 0z"
+                clip-rule="evenodd" />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </form>
 
 
-        <hr>
+    <hr>
 
-        <table class="table table-hover table-borderless malang-table">
-            <thead>
-                <tr>
-                    <th>Ticker</th>
-                    <th>Name</th>
-                    <th>Price</th>
-                    <th>P/E Ratio</th>
-                    <th>EPS</th>
-                    <th>Dividend</th>
-                    <th>Yeild</th>
-                    <th>ADGR*</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>AAPL</td>
-                    <td>Apple Inc.</td>
-                    <td>267.99</td>
-                    <td>21.28</td>
-                    <td>12.60</td>
-                    <td>3.08</td>
-                    <td>1.15%</td>
-                    <td>6%</td>
-                </tr>
-                <tr>
-                    <td>MCD</td>
-                    <td>McDonald's Corporation</td>
-                    <td>183.70</td>
-                    <td>23.31</td>
-                    <td>7.88</td>
-                    <td>5.00 </td>
-                    <td>2.72%</td>
-                    <td>8%</td>
-                </tr>
-                <tr>
-                    <td>NGG</td>
-                    <td>National Grid plc</td>
-                    <td>56.50</td>
-                    <td>8.77</td>
-                    <td>6.44</td>
-                    <td>3.09</td>
-                    <td>5.68%</td>
-                    <td>6%</td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
+    <table class="table table-hover table-borderless malang-table">
+      <thead>
+        <tr>
+          <th>Ticker</th>
+          <th>Name</th>
+          <th>Price</th>
+          <th>P/E Ratio</th>
+          <th>EPS</th>
+          <th>Dividend</th>
+          <th>Yeild</th>
+          <th>ADGR*</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>AAPL</td>
+          <td>Apple Inc.</td>
+          <td>267.99</td>
+          <td>21.28</td>
+          <td>12.60</td>
+          <td>3.08</td>
+          <td>1.15%</td>
+          <td>6%</td>
+        </tr>
+        <tr>
+          <td>MCD</td>
+          <td>McDonald's Corporation</td>
+          <td>183.70</td>
+          <td>23.31</td>
+          <td>7.88</td>
+          <td>5.00 </td>
+          <td>2.72%</td>
+          <td>8%</td>
+        </tr>
+        <tr>
+          <td>NGG</td>
+          <td>National Grid plc</td>
+          <td>56.50</td>
+          <td>8.77</td>
+          <td>6.44</td>
+          <td>3.09</td>
+          <td>5.68%</td>
+          <td>6%</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
 </div>
 <div class="col-md-4 ml-sm-auto col-lg-4 p-0">
-    <div class="secondary-pane h-100 p-4">
+  <div class="secondary-pane h-100 p-4">
 
-    </div>
+  </div>
 </div>
