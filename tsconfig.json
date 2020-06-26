@@ -66,6 +66,8 @@
   },
   "exclude": [
     "public/",
-    "build/"
+    "build/",
+    "src/public",
+    "./webpack.config.ts"
   ]
 }
