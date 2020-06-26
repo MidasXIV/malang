@@ -5,10 +5,11 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "prebuild": "rimraf ./build ./public/js",
+    "prebuild": "rimraf ./build",
     "build2": "npm run build-ts && npm run copy-static-assets",
     "build": "npm run build-ts",
     "build:client": "tsc --p tsconfig.client.json",
+    "prebuild:webpack": "rimraf ./public/js",
     "build:webpack": "cross-env TS_NODE_PROJECT=\"tsconfig.webpack.json\" webpack",
     "build-ts": "tsc",
     "copy-static-assets": "ts-node src/util/copyPublicAssets.ts",
