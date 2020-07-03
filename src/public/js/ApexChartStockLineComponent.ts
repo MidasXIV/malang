@@ -43,7 +43,10 @@ export default class ApexChartComponent {
 
   private setChartOptions(): void {
     this.options = {
-      chart: { height: 280, type: "area" },
+      chart: {
+        height: 100, width: "100%", type: "line",
+        zoom: { enabled: false }, toolbar: { show: false },
+      },
       grid: {
         show: false,
         // borderColor: '#90A4AE',
@@ -63,25 +66,15 @@ export default class ApexChartComponent {
           data: [45, 52, 38, 45, 19, 23, 2, 45, 75, 60]
         }
       ],
-      fill: {
-        colors: [this.chartColor, "#000000"],
-        type: "gradient",
-        gradient: {
-          shade: "dark",
-          shadeIntensity: 0.5,
-          opacityFrom: 0.7,
-          opacityTo: 0.0,
-          stops: [0, 90, 100]
-        }
-      },
-      tooltip: { theme: "dark" },
       stroke: {
-        width: 3,
+        width: 2,
+        curve: 'smooth',
         colors: [this.chartColor]
       },
+      tooltip: { theme: "dark" },
       xaxis: {
         labels: {
-          show: true,
+          show: false,
           style: { colors: this.defaultAxisLabelsColor }
         },
         axisBorder: {
@@ -102,7 +95,7 @@ export default class ApexChartComponent {
       },
       yaxis: {
         labels: {
-          show: true,
+          show: false,
           style: {
             colors: this.defaultAxisLabelsColor
           }
