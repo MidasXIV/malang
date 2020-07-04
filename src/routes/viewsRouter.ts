@@ -5,22 +5,22 @@ const router = Router();
 
 /** dividend simulator page */
 router.get('/', function (request: Request, response: Response) {
-    response.render('index', { layout: 'main' });
+    response.render('index', { layout: 'main', active: { home: true } });
 });
 
 /** registration page */
 router.get('/register', function (request: Request, response: Response) {
-    response.render('login', { layout: 'main' });
+    response.render('login', { layout: 'main', active: { register: true } });
 });
 
 /** dividend portfolio page */
 router.get('/portfolio', function (request: Request, response: Response) {
-    response.render('portfolio', { layout: 'main' });
+    response.render('portfolio', { layout: 'main', active: { portfolio: true } });
 });
 
 /** overview page */
 router.get('/overview', function (request: Request, response: Response) {
-    response.render('overview', { layout: 'main' });
+    response.render('overview', { layout: 'main', active: { overview: true } });
 });
 
 /** apex chart testing page */
